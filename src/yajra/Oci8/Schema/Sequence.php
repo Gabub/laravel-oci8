@@ -73,12 +73,7 @@ class Sequence
             return false;
         }
 
-        return $this->connection->selectOne("select *
-			from all_sequences
-			where
-				sequence_name=upper('{$name}')
-				and sequence_owner=upper(user)
-			");
+        return true;
     }
 
     /**
